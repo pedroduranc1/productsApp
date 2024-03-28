@@ -15,16 +15,19 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.productsApp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.productsApp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "build": { "babel": { "include": [ "@ui-kitten/components" ] }}
   }
 }
