@@ -9,11 +9,11 @@ export const MainLayout = ({ title, subtitle, rightActions, children, rightActio
 
     const {canGoBack,goBack} = useNavigation()
 
-    const renderBackAction = () => {
-        <TopNavigationAction 
+    const RenderBackAction = () => {
+        return <TopNavigationAction 
         icon={<><Text>Back</Text></>}
         onPress={goBack} 
-        />
+        />    
     }
 
     const RenderRightAction = () => {
@@ -35,7 +35,7 @@ export const MainLayout = ({ title, subtitle, rightActions, children, rightActio
                 title={title}
                 subtitle={subtitle}
                 alignment='center'
-                accessoryLeft={canGoBack ? renderBackAction : undefined}
+                accessoryLeft={canGoBack ? RenderBackAction: undefined}
                 accessoryRight={()=> <RenderRightAction/>}
             />
 
