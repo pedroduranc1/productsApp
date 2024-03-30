@@ -2,6 +2,7 @@ import React from 'react'
 import { Layout, TopNavigation, Divider,Text,TopNavigationAction } from "@ui-kitten/components";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useNavigation } from '@react-navigation/native';
+import { ArrowLeft, Camera, ImagePlus, PictureInPicture } from "lucide-react-native";
 
 export const MainLayout = ({ title, subtitle, rightActions, children, rightActionsIcon }) => {
 
@@ -11,7 +12,7 @@ export const MainLayout = ({ title, subtitle, rightActions, children, rightActio
 
     const RenderBackAction = () => {
         return <TopNavigationAction 
-        icon={<><Text>Back</Text></>}
+        icon={<ArrowLeft color="black" />}
         onPress={goBack} 
         />    
     }
@@ -23,7 +24,7 @@ export const MainLayout = ({ title, subtitle, rightActions, children, rightActio
         return (
             <TopNavigationAction
             onPress={rightActions}
-            icon={<><Text>Algo</Text></>}
+            icon={<ImagePlus color="black"/>}
         />
         )
         
@@ -35,7 +36,7 @@ export const MainLayout = ({ title, subtitle, rightActions, children, rightActio
                 title={title}
                 subtitle={subtitle}
                 alignment='center'
-                accessoryLeft={canGoBack ? RenderBackAction: undefined}
+                accessoryLeft={()=>canGoBack ? <RenderBackAction/> : undefined}
                 accessoryRight={()=> <RenderRightAction/>}
             />
 

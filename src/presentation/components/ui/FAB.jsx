@@ -1,4 +1,5 @@
 import { Button, Text } from '@ui-kitten/components'
+import { Plus } from 'lucide-react-native'
 import React from 'react'
 
 
@@ -15,7 +16,7 @@ export const FAB = ({style,onPress}) => {
         elevation:3,
         borderRadius:13
     }]}
-    accessoryLeft={<><Text style={{color:'white'}}>+</Text></>}
+    accessoryLeft={<><Plus color="white"/></>}
     onPress={onPress}
     />
   )

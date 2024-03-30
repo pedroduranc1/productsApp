@@ -10,6 +10,7 @@ import { ProductImages } from '../../components/products/ProductImages';
 import { genders, sizes } from '../../constants';
 import { ProductSizes } from '../../components/products/ProductSizes';
 import { ProductGenres } from '../../components/products/ProductGenres';
+import { CameraAdapter } from '../../../config/adapters/camera.adapter';
 
 export const ProductScreen = ({ route }) => {
 
@@ -57,6 +58,12 @@ export const ProductScreen = ({ route }) => {
           <MainLayout
             title={values.title}
             subtitle={`Precio ${values.price}`}
+            rightActions={ async()=>{
+              const photos = await CameraAdapter.getPicturesFromLibrary();
+              
+              setFieldValue('images',[...values.images,...photos])
+            }}
+            rightActionsIcon="camera"
           >
             <ScrollView style={{ flex: 1 }}>
               {/* Imagenes del product */}

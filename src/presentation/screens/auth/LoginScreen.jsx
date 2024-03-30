@@ -3,6 +3,7 @@ import { Layout, Text, Input, Button } from "@ui-kitten/components";
 import { Alert, ScrollView, useWindowDimensions } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useAuthStore } from '../../store/auth/AuthStore';
+import { Lock, Mail } from 'lucide-react-native';
 
 export const LoginScreen = () => {
 
@@ -57,6 +58,7 @@ export const LoginScreen = () => {
           <Input
             placeholder='Correo Electronico'
             keyboardType='email-address'
+            accessoryLeft={()=><><Mail color="black"/></>}
             autoCapitalize='none'
             value={form.email}
             onChangeText={(email)=>setForm({...form,email})}
@@ -66,6 +68,7 @@ export const LoginScreen = () => {
           <Input
             placeholder='Password'
             autoCapitalize='none'
+            accessoryLeft={()=><><Lock color="black"/></>}
             secureTextEntry
             onChangeText={(password)=>setForm({...form,password})}
             style={{ marginBottom: 10 }}
