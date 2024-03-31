@@ -40,6 +40,12 @@
         "projectId": "d631a151-f4bf-49c4-ab3e-c469e6327e20"
       }
     },
-    "owner": "pedropdc"
+    "owner": "pedropdc",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/d631a151-f4bf-49c4-ab3e-c469e6327e20"
+    }
   }
 }
