@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "productsApp",
-    "slug": "productsApp",
+    "slug": "productsapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,18 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "build": { "babel": { "include": [ "@ui-kitten/components" ] }}
+    "build": {
+      "babel": {
+        "include": [
+          "@ui-kitten/components"
+        ]
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d631a151-f4bf-49c4-ab3e-c469e6327e20"
+      }
+    },
+    "owner": "pedropdc"
   }
 }
